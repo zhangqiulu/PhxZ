@@ -1,7 +1,7 @@
 #ifndef QUIKSORT_H
 #define QUIKSORT_H
 
-//针对input itertaor类型的的容器;
+//针对Bidirectional Iterator类型的的容器;
 //输入参数,first,last表示排序范围;
 //[first,last) is valiad;
 //升序排列;
