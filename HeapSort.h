@@ -5,7 +5,7 @@
 template<class Iterator>
 void HeapSort(Iterator &first,Iterator &last)
 {
-	HeapSort(first,last,_Iter_cat(first));
+	_HeapSort(first,last,_Iter_cat(first));
 }
 
 //针对inputItertator类型的的容器;
@@ -14,7 +14,7 @@ void HeapSort(Iterator &first,Iterator &last)
 //升序排列;
 
 template<class inputItertator>
-void HeapSort(inputItertator &first,inputItertator &last,std::input_iterator_tag)
+void _HeapSort(inputItertator &first,inputItertator &last,std::input_iterator_tag)
 {
 	inputItertator _sortbegin = last;
 	_sortbegin--;
@@ -57,7 +57,7 @@ void HeapSort(inputItertator &first,inputItertator &last,std::input_iterator_tag
 //[first,last) is valiad;
 //升序排列;
 template<class RandomAccessIterator>
-void HeapSort(RandomAccessIterator &first,RandomAccessIterator &last,std::random_access_iterator_tag)
+void _HeapSort(RandomAccessIterator &first,RandomAccessIterator &last,std::random_access_iterator_tag)
 {
 	RandomAccessIterator _sortbegin = last;
 	_sortbegin--;
