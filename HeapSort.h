@@ -22,7 +22,7 @@ void HeapSort(inputItertator &first,inputItertator &last,std::input_iterator_tag
 	for (;_sortbegin != first; _sortbegin--)
 	{
 		int _cur = distance(first,_sortbegin);
-		int _father = floor((_cur-1)/2);
+		int _father = static_cast<int>((_cur-1)/2);
 		inputItertator _curitr = first;
 		advance(_curitr,_father);
 
@@ -65,7 +65,7 @@ void HeapSort(RandomAccessIterator &first,RandomAccessIterator &last,std::random
 	for (;_sortbegin != first; _sortbegin--)
 	{
 		int _cur = _sortbegin - first;
-		int _father = floor((_cur-1)/2);
+		int _father = static_cast<int>((_cur-1)/2);
 		RandomAccessIterator _curitr = first;
 		while (_father)
 		{
